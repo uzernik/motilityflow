@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+
+# Python virtual environments
+venv/
+.venv/
+backend/venv/
+backend/.venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Env files
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp files
+*.tmp
+*.xlsx#
+*.csv#
+.~lock.*
+#*#
+
+# Emacs backup files
+*~
+\#*\#
+
+# pip installer
+get-pip.py
+

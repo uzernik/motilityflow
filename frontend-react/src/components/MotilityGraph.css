@@ -1,0 +1,126 @@
+.motility-graph {
+  width: 100%;
+}
+
+.motility-graph .graph-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #e2e8f0;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.motility-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.motility-graph .grid-line {
+  stroke: rgba(255, 255, 255, 0.06);
+  stroke-width: 1;
+}
+
+.motility-graph .axis-line {
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1;
+}
+
+.motility-graph .axis-label {
+  fill: #64748b;
+  font-size: 10px;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+.motility-graph .y-label {
+  text-anchor: end;
+  dominant-baseline: middle;
+}
+
+.motility-graph .x-label {
+  text-anchor: middle;
+  font-size: 11px;
+}
+
+.natural-line {
+  fill: none;
+  stroke: #94a3b8;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 6 4;
+}
+
+.adjusted-line {
+  fill: none;
+  stroke: #34d399;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.natural-point {
+  fill: #475569;
+  stroke: #94a3b8;
+  stroke-width: 2;
+}
+
+.adjusted-point {
+  fill: #065f46;
+  stroke: #34d399;
+  stroke-width: 2;
+}
+
+.slow-day-band {
+  rx: 4;
+  ry: 4;
+}
+
+.motility-legend {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+.motility-legend .legend-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.legend-line {
+  width: 18px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.legend-line.natural {
+  background: #94a3b8;
+  background: repeating-linear-gradient(
+    90deg,
+    #94a3b8 0px,
+    #94a3b8 6px,
+    transparent 6px,
+    transparent 10px
+  );
+}
+
+.legend-line.adjusted {
+  background: #34d399;
+}
+
+.motility-legend .legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.motility-legend .legend-dot.slow {
+  background: rgba(239, 68, 68, 0.4);
+  border: 1px solid #ef4444;
+}
+
