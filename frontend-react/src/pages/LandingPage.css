@@ -45,6 +45,12 @@
   margin-bottom: 32px;
 }
 
+.hero-helper {
+  color: #64748b;
+  font-size: 0.85rem;
+  margin-top: 12px;
+}
+
 /* CTA BUTTON */
 .cta-btn {
   background: linear-gradient(90deg, #3b82f6, #10b981);
@@ -95,6 +101,11 @@
 
 .bullets li strong {
   color: #60a5fa;
+}
+
+.section-cta {
+  text-align: center;
+  margin-top: 24px;
 }
 
 /* FEATURES GRID */
