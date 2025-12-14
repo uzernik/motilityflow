@@ -1,10 +1,67 @@
+import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './LandingPage.css';
+
+function ExpandableItem({ text, explanation }) {
+  const [expanded, setExpanded] = useState(false);
+
+  return (
+    <li className="expandable-item">
+      <div className="item-main">
+        <span>{text}</span>
+        <button 
+          className="explain-trigger" 
+          onClick={() => setExpanded(!expanded)}
+          aria-expanded={expanded}
+        >
+          {expanded ? 'Hide' : 'Why?'}
+        </button>
+      </div>
+      {expanded && (
+        <p className="item-explanation">{explanation}</p>
+      )}
+    </li>
+  );
+}
 
 function LandingPageUrgent() {
   const navigate = useNavigate();
 
   const goToDashboard = () => navigate('/dashboard');
+
+  const happeningItems = [
+    {
+      text: "Food is sitting in your stomach longer than usual",
+      explanation: "GLP-1 medications slow how fast the stomach empties. When food stays too long, it can cause nausea, bloating, and pressure. This is common, especially after injections or dose changes."
+    },
+    {
+      text: "You can't tell if it's better to eat or wait",
+      explanation: "When digestion is slowed, eating too soon can make symptoms worse. Waiting too long can make you feel weak. Without guidance, it's hard to know which choice will help."
+    },
+    {
+      text: "Guessing often makes symptoms worse",
+      explanation: "Many people try random foods, supplements, or remedies. Some help, many don't. Trial and error often increases discomfort instead of reducing it."
+    }
+  ];
+
+  const helpsItems = [
+    {
+      text: "Pause eating for a bit",
+      explanation: "Giving your stomach time to empty can reduce pressure and nausea. This is often the fastest way to feel some relief."
+    },
+    {
+      text: "Gentle walking (10–20 minutes)",
+      explanation: "Light movement helps stimulate digestion without stressing your body. Intense exercise can make symptoms worse."
+    },
+    {
+      text: "Liquids or soft foods only",
+      explanation: "Liquids and soft foods move through the stomach more easily and are less likely to sit and cause discomfort."
+    },
+    {
+      text: "Avoid fats and large meals",
+      explanation: "Fat slows digestion even more. Large meals take longer to clear and often worsen nausea and bloating."
+    }
+  ];
 
   return (
     <div className="landing">
@@ -28,15 +85,9 @@ function LandingPageUrgent() {
       <section className="section">
         <h2>What's happening right now</h2>
         <ul className="bullets">
-          <li>
-            Food is sitting in your stomach longer than usual
-          </li>
-          <li>
-            You can't tell if it's better to eat or wait
-          </li>
-          <li>
-            Guessing often makes symptoms worse
-          </li>
+          {happeningItems.map((item, index) => (
+            <ExpandableItem key={index} text={item.text} explanation={item.explanation} />
+          ))}
         </ul>
       </section>
 
@@ -44,10 +95,9 @@ function LandingPageUrgent() {
       <section className="section">
         <h2>What helps right now</h2>
         <ul className="bullets">
-          <li>Pause eating for a bit</li>
-          <li>Gentle walking (10–20 minutes)</li>
-          <li>Liquids or soft foods only</li>
-          <li>Avoid fats and large meals</li>
+          {helpsItems.map((item, index) => (
+            <ExpandableItem key={index} text={item.text} explanation={item.explanation} />
+          ))}
         </ul>
         <div className="section-cta">
           <button className="cta-btn" onClick={goToDashboard}>
