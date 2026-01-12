@@ -1,0 +1,55 @@
+.product-page {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+  margin: 0 auto;
+  padding: 48px;
+  line-height: 1.5;
+  color: #222;
+  max-width: 900px;
+  background: #fff;
+  min-height: 100vh;
+}
+
+.product-page .back-link {
+  display: inline-block;
+  color: #0066cc;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.product-page .back-link:hover {
+  text-decoration: underline;
+}
+
+.product-page h1,
+.product-page h2,
+.product-page h3 {
+  margin-top: 32px;
+}
+
+.product-page h1 {
+  font-size: 2em;
+}
+
+.product-page h2 {
+  font-size: 1.4em;
+}
+
+.product-page h3 {
+  font-size: 1.1em;
+}
+
+.product-page ul {
+  margin-left: 24px;
+}
+
+.product-page li {
+  margin-bottom: 8px;
+}
+
+.product-page__footer {
+  margin-top: 64px;
+  color: #666;
+  font-size: 0.9rem;
+}
+

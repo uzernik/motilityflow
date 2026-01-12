@@ -1,0 +1,85 @@
+.business-plan {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+  background: #ffffff;
+  color: #111;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  line-height: 1.55;
+}
+
+.business-plan__container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 48px 24px 72px;
+}
+
+.business-plan h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.25em;
+}
+
+.business-plan__subtitle {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.business-plan__nav {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 24px;
+}
+
+.business-plan__nav a {
+  color: #0066cc;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.business-plan__nav a:hover {
+  text-decoration: underline;
+}
+
+.business-plan details {
+  border-bottom: 1px solid #e6e6e6;
+  padding: 18px 0;
+}
+
+.business-plan summary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.business-plan summary::-webkit-details-marker {
+  display: none;
+}
+
+.business-plan summary::after {
+  content: "▸";
+  float: right;
+  transition: transform 0.2s ease;
+  color: #888;
+}
+
+.business-plan details[open] summary::after {
+  transform: rotate(90deg);
+}
+
+.business-plan ul {
+  margin-top: 14px;
+  padding-left: 22px;
+}
+
+.business-plan li {
+  margin-bottom: 8px;
+}
+
+.business-plan__footer {
+  margin-top: 64px;
+  color: #666;
+  font-size: 0.9rem;
+}
+

@@ -47,3 +47,8 @@ npm-debug.log*
 # pip installer
 get-pip.py
 
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+

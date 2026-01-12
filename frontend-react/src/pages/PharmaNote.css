@@ -1,0 +1,117 @@
+:root {
+  --bg: #0b1020;
+  --card: #111a33;
+  --ink: #eaf0ff;
+  --muted: #a9b4d6;
+  --line: #243056;
+  --accent: #6aa7ff;
+  --accent2: #7df0c6;
+  --radius: 16px;
+  --max: 900px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+  --sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+}
+
+.pharma-note {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--ink);
+  background: radial-gradient(1200px 800px at 10% 10%, rgba(106,167,255,.18), transparent 60%),
+              radial-gradient(1000px 700px at 90% 20%, rgba(125,240,198,.14), transparent 55%),
+              var(--bg);
+  line-height: 1.45;
+  min-height: 100vh;
+}
+
+.pharma-note * {
+  box-sizing: border-box;
+}
+
+.pharma-note header {
+  padding: 36px 18px 22px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pharma-note .back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+
+.pharma-note .back-link:hover {
+  text-decoration: underline;
+}
+
+.pharma-note main {
+  padding: 24px 18px 56px;
+}
+
+.pharma-note .wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+}
+
+.pharma-note .kicker {
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-size: 12px;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.pharma-note h1 {
+  font-size: 30px;
+  margin: 0 0 10px;
+  line-height: 1.15;
+}
+
+.pharma-note h2 {
+  font-size: 18px;
+  margin: 24px 0 8px;
+}
+
+.pharma-note p {
+  margin: 8px 0;
+  color: var(--ink);
+}
+
+.pharma-note ul {
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+
+.pharma-note li {
+  margin: 6px 0;
+}
+
+.pharma-note .card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 20px;
+}
+
+.pharma-note .muted {
+  color: var(--muted);
+}
+
+.pharma-note .callout {
+  margin-top: 16px;
+  padding: 14px 16px;
+  border-left: 4px solid var(--accent);
+  background: rgba(106,167,255,.08);
+  border-radius: 12px;
+  border: 1px solid var(--line);
+}
+
+.pharma-note footer {
+  border-top: 1px solid var(--line);
+  padding: 18px;
+  color: var(--muted);
+  font-size: 13px;
+}
+

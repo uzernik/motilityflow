@@ -14,7 +14,7 @@ function ExpandableItem({ text, explanation }) {
           onClick={() => setExpanded(!expanded)}
           aria-expanded={expanded}
         >
-          {expanded ? 'Hide' : 'Why?'}
+          {expanded ? 'Got it' : 'Why?'}
         </button>
       </div>
       {expanded && (
@@ -27,39 +27,40 @@ function ExpandableItem({ text, explanation }) {
 function LandingPageUrgent() {
   const navigate = useNavigate();
 
+  const goToEntry = () => navigate('/entry');
   const goToDashboard = () => navigate('/dashboard');
 
   const happeningItems = [
     {
       text: "Food is sitting in your stomach longer than usual",
-      explanation: "GLP-1 medications slow how fast the stomach empties. When food stays too long, it can cause nausea, bloating, and pressure. This is common, especially after injections or dose changes."
+      explanation: "GLP-1 medications slow how fast the stomach empties. When food stays longer than usual, it can create nausea, bloating, and pressure. This is very common, especially after injections or dose changes."
     },
     {
       text: "You can't tell if it's better to eat or wait",
-      explanation: "When digestion is slowed, eating too soon can make symptoms worse. Waiting too long can make you feel weak. Without guidance, it's hard to know which choice will help."
+      explanation: "When digestion is slowed, eating too soon can make symptoms worse. Waiting too long can leave you feeling weak. Without guidance, it's genuinely hard to know which choice will help."
     },
     {
       text: "Guessing often makes symptoms worse",
-      explanation: "Many people try random foods, supplements, or remedies. Some help, many don't. Trial and error often increases discomfort instead of reducing it."
+      explanation: "Many people try random foods, supplements, or remedies. Some help, many don't. Trial and error often adds discomfort instead of relieving it."
     }
   ];
 
   const helpsItems = [
     {
       text: "Pause eating for a bit",
-      explanation: "Giving your stomach time to empty can reduce pressure and nausea. This is often the fastest way to feel some relief."
+      explanation: "Giving your stomach time to empty can reduce pressure and nausea. For many people, this is the fastest way to feel some relief."
     },
     {
       text: "Gentle walking (10–20 minutes)",
-      explanation: "Light movement helps stimulate digestion without stressing your body. Intense exercise can make symptoms worse."
+      explanation: "Light movement can help stimulate digestion without stressing your body. Intense exercise often makes symptoms worse."
     },
     {
       text: "Liquids or soft foods only",
-      explanation: "Liquids and soft foods move through the stomach more easily and are less likely to sit and cause discomfort."
+      explanation: "Liquids and soft foods move through the stomach more easily and are less likely to sit there and cause discomfort."
     },
     {
       text: "Avoid fats and large meals",
-      explanation: "Fat slows digestion even more. Large meals take longer to clear and often worsen nausea and bloating."
+      explanation: "Fat slows digestion even more. Large meals take longer to clear and often make nausea and bloating worse."
     }
   ];
 
@@ -73,13 +74,15 @@ function LandingPageUrgent() {
           You're not doing anything wrong.
         </p>
         <p className="hero-sub">
-          GLP-1 drugs slow digestion — sometimes food just doesn't move.
+          GLP-1 drugs can slow digestion — sometimes food just doesn't move.
         </p>
-        <button className="cta-btn" onClick={goToDashboard}>
+        <button className="cta-btn" onClick={goToEntry}>
           Get help now →
         </button>
         <p className="hero-helper">Takes under a minute. No signup.</p>
       </section>
+
+      <p className="section-transition">Here's what's likely happening — and why you're feeling this way.</p>
 
       {/* WHAT'S HAPPENING RIGHT NOW */}
       <section className="section">
@@ -155,6 +158,12 @@ function LandingPageUrgent() {
           Enter MotilityFlow →
         </button>
       </section>
+
+      {/* FOOTER */}
+      <footer className="landing-footer">
+        <span>© 2026 MotilityFlow</span>
+        <a href="/business" className="footer-link">Business Plan</a>
+      </footer>
     </div>
   );
 }
